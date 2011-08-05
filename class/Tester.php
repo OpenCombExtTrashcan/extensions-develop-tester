@@ -11,14 +11,10 @@ class Tester extends Extension
 {
 	public function load()
 	{
-		// 定义ORM
-        $this->defineOrm(PrototypeAssociationMap::singleton()) ;
+        //加载微博相同心情的朋友控制器
+        $this->application()->accessRouter()->addController("oc\\ext\\tester\\CreateTestSeleken",'seleken');
 		
 	}
-	
-	public function defineOrm(PrototypeAssociationMap $aAssocMap)
-	{}
-	
 }
 
 ?>
